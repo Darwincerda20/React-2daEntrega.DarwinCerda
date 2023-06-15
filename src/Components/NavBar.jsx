@@ -44,7 +44,7 @@ export const NavBar = () => (
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="*">
+              <a className="nav-link" href="../src/Components/CartWidget.jsx">
                 <FontAwesomeIcon icon={faShoppingCart} />
                 <span className="notificacion">1</span>
               </a>
