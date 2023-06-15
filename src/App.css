@@ -36,3 +36,36 @@
     transform: rotate(360deg);
   }
 }
+
+/******************************** Estilos para el Navbar *********************************/
+.navbar {
+  background-color: #333;
+}
+
+.navbar-brand {
+  font-size: 25px;
+}
+
+.nav-link {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.notificacion {
+  background-color: rgb(179, 255, 0);
+  color: #020202;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+img {
+  margin-right: 10px;
+}
