@@ -5,7 +5,7 @@ import { faColonSign, faShoppingCart,} from "@fortawesome/free-solid-svg-icons";
 import { ItemListContainer } from "./Components/ItemListContainer"; /* TRAIGO EL GREETINGS */
 import { CartWidget } from "./Components/CartWidget"; /* TRAIGO EL CARRITO */
 import  ItemCount  from "./Components/ItemCount";
-import { ItemDetailContainer } from "./Components/ItemDetailContainer";
+import  ItemDetailContainer  from "./Components/ItemDetailContainer";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
       <CartWidget />
       <FontAwesomeIcon icon={faShoppingCart} />
       <ItemListContainer greeting={"texto-Bienvenidos"} />
-      <ItemCount initial={1} stock={10} onAdd={(quantity) => console.log("Cantidad agregada", quantity)}></ItemCount>
+
     </>
   );
 }
