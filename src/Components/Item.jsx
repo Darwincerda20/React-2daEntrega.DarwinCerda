@@ -1,28 +1,28 @@
 const Item = ({id, nombre, categoria, ImagenURL, precio, stock, Descripcion}) => {
+    
     return (
-        <article className="CardItem">
-            <header className="Header">
-                <h2 className="ItemHeader">
-                    {nombre}
-                </h2>
-            </header>
-            <picture>
-                <img src={ImagenURL} alt="{nombre} className="ItemImg />
-            </picture>
-            <section>
-                <p className="Info">
-                    Detalle: {Descripcion}
-                </p>
-                <p className="Info">
-                    Precio: ${precio}
-                </p>
-                <p className="Info">
-                    Stock Disponible: {stock}
-                </p>
-            </section>
-            <footer className="ItemFooter">
-                <button className="Option"> Ver Más </button>
-            </footer>
-        </article>
-    )
-}
+        <> 
+        <div className="CardItem">
+            <div className="row">
+                <div className="col ">
+                    <div className="CardContainer">
+                        <div className="Card" style={{width: "18rem"}}>
+                            <img src={ImagenURL} className="ItemImg card-img-top" alt={nombre}></img>
+                            <div className="card-body">
+                            <h5 className="ItemHeader card-title">{nombre}</h5>
+                            <p className="Info card-text">Detalle: {Descripcion}.</p>
+                            <p className="info card-text">Precio: ${precio}.-</p>
+                            <p className="info card-text">Stock: {stock} un.-</p>
+                            <a href="#" className="Option btn btn-primary">Ver Más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        </>
+    );
+};
+
+export default Item

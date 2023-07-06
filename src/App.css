@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 .App {
   text-align: center;
 }
@@ -70,3 +77,19 @@ img {
   margin-right: 10px;
 }
 
+
+/********************************** Estilos para las tarjetas **********************************/
+.CardItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.CardContainer {
+  display: flex;
+}
+
+.Card {
+  width: 18rem;
+  margin-right: 10px; /* Ajusta el margen entre las tarjetas según tus necesidades */
+}

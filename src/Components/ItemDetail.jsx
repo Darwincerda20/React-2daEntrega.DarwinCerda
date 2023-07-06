@@ -1,35 +1,24 @@
 import ItemCount from "./ItemCount";
 
-const ItemDetail = ({
-  id,
-  nombre,
-  imagenURL,
-  categoria,
-  Descripcion,
-  precio,
-  stock,
-}) => {
+const ItemDetail = ({id,nombre,ImagenURL,categoria,Descripcion,precio,stock,}) => {
   return (
     <article className="CardItem">
-      <header className="Header">
-        <h2 className="ItemHeader">{nombre}</h2>
-      </header>
-      <picture>
-        <img src={imagenURL} alt={nombre} className="ItemImg" />
-      </picture>
-      <section>
-        <p className="Info">Categoria: {categoria}</p>
-        <p className="Info">Descripción: {Descripcion}</p>
-        <p className="Info">Precio: {precio}</p>
-      </section>
-      <footer className="ItemFooter">
-        <ItemCount
-          initial={1}
-          stock={stock}
-          onAdd={(quantity) => console.log("Cantidad Agregada")}
-        />
-      </footer>
-    </article>
+            <div className="CardContainer">
+                <div className="Card" style={{width: "18rem"}}>
+                    <img src={ImagenURL} className="ItemImg card-img-top" alt={nombre}></img>
+                    <div className="card-body">
+                    <h5 className="ItemHeader card-title">{nombre}</h5>
+                    <p className="Info card-text">Detalle: {Descripcion}.</p>
+                    <p className="info card-text">Precio: ${precio}.-</p>
+                    <p className="info card-text">Disponible: {stock} un.-</p>
+                    <a href="#" className="Option btn btn-primary">Ver Más</a>
+                    </div>
+                    <footer className="ItemFooter">
+                    <ItemCount initial={1} stock={stock} onAdd={(quantity) => console.log("Cantidad Agregada")}/>
+                    </footer>
+                </div>
+            </div>
+     </article>
   );
 };
 
