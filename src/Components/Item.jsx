@@ -15,9 +15,9 @@ const Item = ({id, nombre, categoria, ImagenURL, precio, stock, Descripcion}) =>
                             <p className="Info card-text">Detalle: {Descripcion}.</p>
                             <p className="info card-text">Precio: ${precio}.-</p>
                             <p className="info card-text">Stock: {stock} un.-</p>
-                            <a href="#" className="Option btn btn-primary">Ver Más</a>
+                            <a className="Option btn btn-primary" href="#">Ver Más</a>
                             <footer className="ItemFooter">
-                                <ItemCount initial={1} stock={stock} onAdd={(quantity) => console.log("Cantidad Agregada")}/>
+                                <ItemCount initial={1} stock={stock} onAdd={(quantity) => console.log("Cantidad Agregada")} />
                             </footer>
                             </div>
                         </div>
@@ -30,4 +30,4 @@ const Item = ({id, nombre, categoria, ImagenURL, precio, stock, Descripcion}) =>
     );
 };
 
-export default Item
+export default Item;

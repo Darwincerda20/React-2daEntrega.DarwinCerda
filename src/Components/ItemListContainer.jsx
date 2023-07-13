@@ -1,20 +1,26 @@
 import { useState, useEffect } from "react";
-import { getProducts } from '../Data'
+import { getProducts, getProductsByCategory } from '../Data'
 import  ItemList  from'./ItemList'
+
+import { useParams } from "react-router-dom";
 
 
 export const ItemListContainer = ({greeting}) =>{
   const [products, setProducts] = useState([])
 
+  const {categoryId}= useParams()
+
   useEffect(() => {
-    getProducts() 
+    const asyncFunc= categoryId ? getProductsByCategory: getProducts
+
+    asyncFunc(categoryId) 
       .then(response => {
         setProducts(response)
       })
       .catch(error => {
         console.error(error)
       })
-  },[])
+  },[categoryId])
       
   return (
         <div style={{ backgroundColor: 'orange', padding: '20px' }}>
@@ -27,4 +33,4 @@ export const ItemListContainer = ({greeting}) =>{
       );
 }
 
-export default ItemListContainer
+export default ItemListContainer;
